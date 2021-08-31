@@ -1,0 +1,25 @@
+version: "3.4"
+
+services:
+  yolov5_jetson:
+    restart: always
+    container_name: yolov5_jetson
+    image: yolov5_jetson_image
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.yolov5_jetson
+    env_file:
+      - docker.env
+    volumes:
+      - type: bind
+        source: ../yolov5_jetson
+        target: /yolov5_jetson
+    working_dir: /yolov5_jetson
+    command: bash
+    networks:
+      - network
+    privileged: true
+    runtime: nvidia
+
+networks:
+  network:
