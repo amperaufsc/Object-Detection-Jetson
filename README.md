@@ -16,6 +16,10 @@
 # Yolov5 with TensorRT
 https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5
 
+## Jetson Configs:
+- Ubuntu 18.04.5 LTS
+- Jetpack 4.5.1
+
 ## Generate .wts from pytorch with .pt, or download .wts from model zoo
 1. `git clone https://github.com/ultralytics/yolov5.git`
 2. `git clone https://github.com/wang-xinyu/tensorrtx.git`
