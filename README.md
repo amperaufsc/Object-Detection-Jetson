@@ -1,4 +1,13 @@
+# Jetson Nano System Configuration:
+- Ubuntu 18.04.5 LTS
+- Jetpack 4.5.1
+
+
 # Yolov5 with PyTorch
+
+## Install Docker Engine and Docker Compose:
+1. Docker Engine - https://docs.docker.com/engine/install/ubuntu/
+2. Docker Compose - https://docs.docker.com/compose/install/
 
 ## Build docker image:
 `sudo python3 docker_env.py --build`
@@ -12,13 +21,7 @@
 *It will download the model the first time you run the code*
 
 
-
 # Yolov5 with TensorRT
-https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5
-
-## Jetson Configs:
-- Ubuntu 18.04.5 LTS
-- Jetpack 4.5.1
 
 ## Generate .wts from pytorch with .pt, or download .wts from model zoo
 1. `git clone https://github.com/ultralytics/yolov5.git`
@@ -36,3 +39,6 @@ https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5
 5. `make`
 6. `sudo ./yolov5 -s yolov5s.wts yolov5s.engine s`
 7. `sudo ./yolov5 -d yolov5s.engine ../samples`
+
+## General TensorRT instructions:
+https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5
